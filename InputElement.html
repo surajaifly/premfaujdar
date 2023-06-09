@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>JS With HTML: Display output on HTML</title>
+        <script>
+            //Display message and change UI element using java script
+            //To change UI element value, we need either "class" or "Id"
+            function handleOnClickButton(){
+                var inputFromUser = parseInt(prompt('Enter Some Number'));
+
+                document.getElementById('output').innerHTML = 'Input form User: ' + inputFromUser;
+            }
+
+
+            function handleClickForInput(){
+                var inputTextValue = document.getElementById('input-box').value;
+                console.log('inputTextValue multiply by 5: ', inputTextValue * 5);
+            }
+        </script>
+    </head>
+        <h1>My First Page</h1>
+        <div>
+            My Example
+        </div>
+        <div id="output">
+            Result:
+        </div>
+        <button onclick="handleOnClickButton()">Click </button>
+
+        <hr/>
+        Enter any Text
+        <input id="input-box" type="number"/><br/>
+        <button onclick="handleClickForInput()">get Value from Input box </button>
+    </body>
+
+     <!-- Assignment-->
+    <!-- Simple Caculator 
+        2 input box <-> Number type
+        4 button: Sum, Subtract, Multiply, and divide
+
+        when user click on button, ask for two number, and perform the operation based on the button name.
+        and display the result.
+    -->
+</html>
