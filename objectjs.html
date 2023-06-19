@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Object in Javascript</title>
+        <script>
+            //WHY? when we have to work on mupliple UI elements.
+            //Object objectName = new Object();
+            let inputForm = new Object();
+            inputForm.firstName = 'Suraj'; //here 'firstName' is know as attributes.
+            inputForm.lastName = 'Singh';
+
+            function showValueFromObject(){
+                document.getElementById("fName").value = inputForm.firstName;
+            }
+
+            function onInputChange(){
+                inputForm.firstName = document.getElementById("fName").value;
+                document.getElementById("output").innerHTML = inputForm.firstName;
+            }
+
+            function showNewValue(){
+                document.getElementById("output").innerHTML = inputForm.firstName;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Object in Javascript</h1>
+        <input id="fName" type="text" onkeyup="onInputChange()"/>
+
+        <button onclick="showValueFromObject()"> SHOW</button>
+        <button onclick="showNewValue()"> SHOW new </button>
+        <span id="output"></span>
+    </body>
+</html>
